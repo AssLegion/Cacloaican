@@ -1,0 +1,89 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.lodging-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+}
+.lodging-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.lodging {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+.lodging h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px; /* Tăng kích thước tiêu đề */
+}
+.lodging p {
+    font-size: 16px; /* Tăng kích thước nội dung */
+}
+.price {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px; /* Tăng kích thước giá tiền */
+}
+button {
+    display: inline-block;
+    margin-left: 440px; /* Đưa nút "Tìm hiểu thêm" sang bên phải giá căn */
+    padding: 8px 16px;
+    background-color: #f4e1d2;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle; /* Căn cùng dòng với giá căn */
+}
+.image {
+    width: 50%;
+    text-align: center;
+    padding-left: 20px; /* Điều chỉnh để thẳng hàng với văn bản */
+}
+.image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Đổi vị trí văn bản và ảnh cho các mục 2, 4, 6, 8 */
+.lodging-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Căn chỉnh ảnh bên phải thẳng hàng với văn bản */
+.lodging-container:nth-child(odd) .image {
+    padding-left: 0px;
+    width: 50%; /* Đảm bảo chiều rộng ảnh căn thẳng với văn bản */
+}
+.lodging-container:nth-child(even) .image {
+    padding-right: 20px;
+    width: 50%; /* Đảm bảo chiều rộng ảnh căn thẳng với văn bản */
+}
+/* Nút thêm căn chỉnh giữa */
+.add-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.add-more-button button {
+    padding: 12px 24px;
+    background-color: #f4e1d2;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0;
+}
+
